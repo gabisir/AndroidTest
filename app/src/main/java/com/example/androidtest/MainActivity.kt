@@ -1,5 +1,6 @@
 package com.example.androidtest
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -50,6 +51,14 @@ class MainActivity : AppCompatActivity() {
         counter++
         val text1: TextView = findViewById(R.id.Counter)
         text1.text = counter.toString()
+        if(counter==10)
+        {
+            counter = 0
+            val intent = Intent(this, SuccessActivity::class.java).apply{
+                putExtra("name", findViewById<TextView>(R.id.plainTextName).text.toString())
+            }
+            startActivity(intent)
+        }
     }
     fun onButtonDownClicked(view: View) {
         if(counter!=0)

@@ -19,7 +19,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="0"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="48sp" />
 
         <Button
             android:id="@+id/ButtonUp"
@@ -32,7 +33,17 @@
             android:id="@+id/buttonDown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onButtonDownClicked"
+            android:onClick="onsuccessbutton"
             android:text="DOWN" />
+
+        <EditText
+            android:id="@+id/plainTextName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="text"
+            android:text="Gabrijel"
+            android:textSize="30sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
