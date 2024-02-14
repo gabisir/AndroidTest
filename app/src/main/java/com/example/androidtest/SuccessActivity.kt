@@ -1,10 +1,12 @@
 package com.example.androidtest
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class SuccessActivity : AppCompatActivity() {
     lateinit var textView: TextView
@@ -17,8 +19,20 @@ class SuccessActivity : AppCompatActivity() {
     }
 
     fun successbuttonclicked(view: View) {
-        val sms = Intent(Intent.ACTION_VIEW)
-        startActivity(sms)
-    }
+        val message = textView.text.toString()
+        var phoneNumber=findViewById<TextView>(R.id.editTextPhone).text.toString()
+        val defaultPhoneNumber="0919445464"
+        if(phoneNumber=="")
+            phoneNumber=defaultPhoneNumber
+        val uri = Uri.parse("smsto:$phoneNumber")
+        val smsIntent = Intent(Intent.ACTION_SENDTO, uri)
+        smsIntent.putExtra("sms_body", message)
 
+        val chooser: Intent = Intent.createChooser(smsIntent, "Share")
+
+        if (smsIntent.resolveActivity(packageManager) != null)
+            startActivity(chooser)
+        else
+            Toast.makeText(this, "No SMS app found", Toast.LENGTH_SHORT).show()
+    }
 }

@@ -18,6 +18,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:textSize="34sp"
+            android:layout_marginBottom="20sp"
+            android:layout_marginTop="-50sp"/>
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="telefon primatelja:"
+            android:inputType="phone"
+            android:textAlignment="center"
             android:textSize="30sp" />
 
         <Button
@@ -27,5 +39,6 @@
             android:onClick="successbuttonclicked"
             android:text="Send SMS"
             android:textSize="20sp" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
