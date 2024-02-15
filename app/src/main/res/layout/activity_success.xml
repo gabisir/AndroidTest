@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/running_abstract">
 
         <TextView
             android:id="@+id/textView"
@@ -20,7 +21,9 @@
             android:gravity="center"
             android:textSize="34sp"
             android:layout_marginBottom="20sp"
-            android:layout_marginTop="-50sp"/>
+            android:layout_marginTop="-50sp"
+            android:background="?colorSecondary"
+            android:textColor="?colorOnSecondary"/>
 
         <EditText
             android:id="@+id/editTextPhone"
@@ -30,7 +33,9 @@
             android:hint="telefon primatelja:"
             android:inputType="phone"
             android:textAlignment="center"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:background="?colorSecondary"
+            android:textColor="?colorOnSecondary"/>
 
         <Button
             android:id="@+id/success_button"

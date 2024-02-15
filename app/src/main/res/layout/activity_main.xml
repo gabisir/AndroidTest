@@ -11,17 +11,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/running_abstract">
 
         <TextView
             android:id="@+id/Counter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="-80sp"
+            android:background="?colorSecondary"
+            android:clickable="true"
             android:gravity="center"
+            android:onClick="counterClick"
             android:text="0"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="48sp"
-            android:layout_marginTop="-80sp"/>
+            android:textColor="?colorOnSecondary"
+            android:textSize="48sp" />
 
         <Button
             android:id="@+id/ButtonUp"
@@ -53,6 +58,8 @@
             android:gravity="center"
             android:inputType="text"
             android:text="Gabrijel"
-            android:textSize="30sp" />
+            android:textSize="48sp"
+            android:background="?colorSecondary"
+            android:textColor="?colorOnSecondary"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

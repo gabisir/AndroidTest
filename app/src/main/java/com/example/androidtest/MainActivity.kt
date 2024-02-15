@@ -5,11 +5,14 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
+import android.view.ContextMenu
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,9 +24,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE)
-
         counter = sharedPreferences.getInt(SCORE_KEY, 0)
         if(counter>=10)
             counter = 0
@@ -90,7 +91,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-
         outState.putInt("counter", counter)
     }
 
@@ -105,5 +105,20 @@ class MainActivity : AppCompatActivity() {
         val text1: TextView = findViewById(R.id.Counter)
         text1.text = counter.toString()
     }
-
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.restore_counter -> {
+                true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+    fun counterClick(view: View) {
+        Toast.makeText(applicationContext, "clickedCounter", Toast.LENGTH_SHORT).show()
+    }
 }

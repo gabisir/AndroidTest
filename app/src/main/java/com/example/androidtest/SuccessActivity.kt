@@ -27,9 +27,7 @@ class SuccessActivity : AppCompatActivity() {
         val uri = Uri.parse("smsto:$phoneNumber")
         val smsIntent = Intent(Intent.ACTION_SENDTO, uri)
         smsIntent.putExtra("sms_body", message)
-
         val chooser: Intent = Intent.createChooser(smsIntent, "Share")
-
         if (smsIntent.resolveActivity(packageManager) != null)
             startActivity(chooser)
         else
