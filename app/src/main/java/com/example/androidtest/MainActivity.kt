@@ -5,15 +5,12 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
-import android.view.ContextMenu
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-
 
 class MainActivity : AppCompatActivity() {
     var counter = 0
@@ -30,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             counter = 0
         val textView = findViewById<TextView>(R.id.Counter)
         textView.text = "$counter"
-
+        setSupportActionBar(findViewById(R.id.my_toolbar))
     }
 
     override fun onStart() {
