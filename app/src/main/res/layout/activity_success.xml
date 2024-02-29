@@ -19,31 +19,64 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="34sp"
-            android:layout_marginBottom="20sp"
             android:layout_marginTop="-50sp"
+            android:layout_marginBottom="20sp"
             android:background="?colorSecondary"
-            android:textColor="?colorOnSecondary"/>
+            android:gravity="center"
+            android:text="@string/success"
+            android:textColor="?colorOnSecondary"
+            android:textSize="34sp" />
 
         <EditText
             android:id="@+id/editTextPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="telefon primatelja:"
+            android:hint="@string/phone_number"
             android:inputType="phone"
             android:textAlignment="center"
             android:textSize="30sp"
             android:background="?colorSecondary"
             android:textColor="?colorOnSecondary"/>
 
+        <RadioGroup
+            android:id="@+id/RadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" >
+
+            <RadioButton
+                android:id="@+id/Phone1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusedByDefault="true"
+                android:gravity="center"
+                android:text="0919445464"
+                android:textSize="30sp" />
+
+            <RadioButton
+                android:id="@+id/Phone2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="09121093004"
+                android:textSize="30sp" />
+
+            <RadioButton
+                android:id="@+id/Phone3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0912783612634"
+                android:textSize="30sp" />
+        </RadioGroup>
+
         <Button
             android:id="@+id/success_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="successbuttonclicked"
-            android:text="Send SMS"
+            android:onClick="successButtonClicked"
+            android:text="@string/send_sms"
             android:textSize="20sp" />
 
     </LinearLayout>

@@ -49,14 +49,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onButtonUpClicked"
-            android:text="UP" />
+            android:text="@string/up" />
 
         <Button
             android:id="@+id/buttonDown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onButtonDownClicked"
-            android:text="DOWN" />
+            android:text="@string/down" />
 
         <Button
             android:id="@+id/reset"
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:onClick="resetCounter"
-            android:text="resert counter" />
+            android:text="@string/reset_counter" />
 
         <EditText
             android:id="@+id/plainTextName"
@@ -74,7 +74,7 @@
             android:ems="10"
             android:gravity="center"
             android:inputType="text"
-            android:text="Gabrijel"
+            android:text="@string/name"
             android:textColor="?colorOnSecondary"
             android:textSize="48sp" />
 

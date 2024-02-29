@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fit Runner</string>
+    <string name="up">GORE</string>
+    <string name="down">DOLJE</string>
+    <string name="reset_counter">Resetiraj brojač</string>
+    <string name="name">Gabrijel</string>
+    <string name="reset">Reset</string>
+    <string name="croatian">Hrvatski</string>
+    <string name="english">Engleski</string>
+    <string name="phone_number">broj telefona:</string>
+    <string name="send_sms">pošalji SMS</string>
+    <string name="success">"uspješno ste napravili 10 koraka"</string>
+</resources>
