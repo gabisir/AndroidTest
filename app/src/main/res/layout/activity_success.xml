@@ -40,6 +40,7 @@
             android:textColor="?colorOnSecondary"/>
 
         <RadioGroup
+            android:onClick="radioGroupClicked"
             android:id="@+id/RadioGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -52,23 +53,26 @@
                 android:focusedByDefault="true"
                 android:gravity="center"
                 android:text="0919445464"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:onClick="radioButton1"/>
 
             <RadioButton
                 android:id="@+id/Phone2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="09121093004"
-                android:textSize="30sp" />
+                android:text="0926371421"
+                android:textSize="30sp"
+                android:onClick="radioButton2"/>
 
             <RadioButton
                 android:id="@+id/Phone3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="0912783612634"
-                android:textSize="30sp" />
+                android:text="0996623236"
+                android:textSize="30sp"
+                android:onClick="radioButton3"/>
         </RadioGroup>
 
         <Button
