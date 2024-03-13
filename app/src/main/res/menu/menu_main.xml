@@ -4,8 +4,9 @@
     <item
     android:id="@+id/restore_counter"
     android:title="@string/reset"
+    android:onClick="resetCounter"
     android:icon="@drawable/baseline_autorenew_24"
-    app:showAsAction="ifRoom"/>
+    app:showAsAction="ifRoom" />
     <item
     android:id="@+id/croatian"
     android:title="@string/croatian" />

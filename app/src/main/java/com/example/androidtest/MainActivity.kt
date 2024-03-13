@@ -140,4 +140,10 @@ class MainActivity : AppCompatActivity() {
     fun counterClick(view: View) {
         Toast.makeText(applicationContext, "clickedCounter", Toast.LENGTH_SHORT).show()
     }
+
+    fun resetCounter(item: MenuItem) {
+        counter = 0
+        val text1: TextView = findViewById(R.id.Counter)
+        text1.text = counter.toString()
+    }
 }
